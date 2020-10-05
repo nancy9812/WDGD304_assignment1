@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Nancy Ma">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Song Playlist</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="images/music.png">
+</head>
+
+<body>
+  <h1>Song Community</h1>
+
+  <div class="container4 container">
+    <button onclick="window.location.href ='index.html';">Home</button>
+    <button onclick="window.location.href ='songs.html';">Song Playlist</button>
+  </div>
+
+  <!-- displays the songs from firebase database -->
+  <div id="songs"></div>
+
+  <!-- button to open the song share form -->
+  <button class="open-button" onclick="openForm()">Share a Song</button>
+
+  <div class="form-popup" id="song-form">
+    <form id="form">
+      <label for="title">Song Title</label>
+      <input type="text" id="song-title" name="title">
+      <label for="artist"><b>Song Artist</b></label>
+      <input type="text" id="song-artist" name="artist">
+      <button type="submit" class="submit-btn form-btn">Submit</button>
+      <button type="button" class="cancel-btn form-btn" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+  <div class="song-container">
+    <!-- display title of song and artist -->
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+
+  <script>
+    // show the popup form
+    function openForm() {
+      document.getElementById("song-form").style.display = "block";
+    }
+
+    // hide the popup form
+    function closeForm() {
+      document.getElementById("song-form").style.display = "none";
+    }
+
+    // Firebase web app config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDWNWJgf86iTC3qFA-7mCl67Sknk3k7Jxc",
+      authDomain: "wdgd-304-assign1.firebaseapp.com",
+      databaseURL: "https://wdgd-304-assign1.firebaseio.com",
+      projectId: "wdgd-304-assign1",
+      storageBucket: "wdgd-304-assign1.appspot.com",
+      messagingSenderId: "53612065607",
+      appId: "1:53612065607:web:7d96c1d420db2ce25d1262"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script type="module" src="share.js"></script>
+</body>
+
+</html>

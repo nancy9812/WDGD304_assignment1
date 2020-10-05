@@ -1,0 +1,261 @@
+@import url("https://use.typekit.net/fmg8rcy.css");
+
+html {
+  background-color: #222;
+  color: #def;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "degular", sans-serif;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 22px;
+  font-family: "quiche-sans", sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "cronos-pro", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: 20px;
+  font-family: "cronos-pro", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 17px;
+  border: 1px solid #1b759c;
+}
+
+.container .info1, .container .info2 {
+  width: 100%;
+}
+
+.container1 {
+  background-color: #000000;
+  -webkit-animation: 1s ease-in 1 fadein;
+  animation: 1s ease-in 1 fadein;
+}
+
+.container2 {
+  background-color: #0b0b0b;
+  -webkit-animation: 2s ease-in 1 fadein2;
+  animation: 2s ease-in 1 fadein2;
+}
+
+.container3 {
+  background-color: #0c0c0c;
+  -webkit-animation: 3s ease-in 1 fadein3;
+  animation: 3s ease-in 1 fadein3;
+}
+
+.container4.container {
+  display: inline-block;
+  margin: auto;
+  border: none;
+}
+
+/* keyframes to make the containers fade in one after another */
+@keyframes fadein {
+  0% { opacity: 0; }
+  25% { opacity: 0.25;}
+  75% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity:0; }
+  25% { opacity: 0.25;}
+  75% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein2 {
+  0% { opacity: 0; }
+  50% { opacity: 0;}
+  60% { opacity: 0.25; }
+  75% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein2 {
+  0% { opacity: 0; }
+  50% { opacity: 0;}
+  60% { opacity: 0.25; }
+  75% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein3 {
+  0% { opacity: 0; }
+  66% { opacity: 0;}
+  77% { opacity: 0.25; }
+  88% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein3 {
+  0% { opacity: 0; }
+  66% { opacity: 0;}
+  77% { opacity: 0.25; }
+  88% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+.container .info1 p, .container .info2 p {
+  margin: 0 10px 20px 10px;
+}
+
+.container .image1, .container .image2 {
+  width: 100%;
+}
+
+.container .image1 img, .container .image2 img {
+  width: 100%;
+}
+
+button {
+  background-color: #000000;
+  color: #ddeeff;
+  margin: auto;
+  padding: 17px;
+  border: 1px solid #1b759c;
+  font-family: "degular", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+button:hover {
+  color: #1b759c;
+}
+
+.container4 button {
+  margin: 17px;
+}
+
+.song-container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.open-button {
+  background-color: #1b759c;
+  border: 1px solid #ddeeff;
+  position: fixed;
+  bottom: 45px;
+  right: 55px;
+  transition: .5s ease;
+}
+
+/* popup form is hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 44px;
+  right: 50px;
+  z-index: 7;
+}
+
+.form-popup form {
+  background-color: #1b759c;
+  border: 1px solid #ddeeff;
+  opacity: 0.8;
+  width: 300px;
+  padding: 17px;
+}
+
+.form-popup form input[type=text] {
+  width: 85%;
+  margin: 17px 0;
+  padding: 17px;
+}
+
+.form-popup form input[type=text]:focus {
+  background-color: #ddeeff;
+}
+
+.form-popup form button {
+  width: 117px;
+}
+
+.form-popup form .submit-btn {
+  background-color: #009966;
+  margin-right: 17px;
+}
+
+.form-popup form .cancel-btn {
+  background-color: #960000;
+  margin-left: 17px;
+}
+
+.open-button:hover {
+  color: #222222;
+}
+
+.song-container iframe {
+  width: 100%;
+  height: 200px;
+}
+
+#songs {
+  margin-bottom: 100px;
+}
+
+#songs .song-container {
+  background-color: #000000;
+  display: inline-flex;
+  margin: 17px auto;
+}
+
+#songs .song-container .label {
+  text-decoration: underline;
+}
+
+#songs .song-container h2 {
+  width: 50%;
+  text-align: center;
+}
+
+#songs .song-container h2:first-child {
+  border-right: 1px solid #ddeeff;
+}
+
+/* Media Queries */
+
+/* Laptop Screen */
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .container {
+    display: inline-flex;
+    width: 80%;
+  }
+
+  .container .info1, .container .info2 {
+    width: 68%;
+  }
+
+  .container .image1, .container .image2 {
+    width: 32%;
+  }
+
+  .song-container iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
